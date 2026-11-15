@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardápio - Bora Burger</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="cabecalho">
+<span class="logo">Bora Burger</span>
+<button class="botaoTema botaoMenu" onclick="abrirMenu()">&#9776;</button>
+<div class="menu" id="menu">
+<a href="index.html">Início</a>
+<a href="produtos.html">Produtos</a>
+<a href="pedidos.html">Pedidos</a>
+<a href="carrinho.html">Carrinho</a>
+<a href="perfil.html">Perfil</a>
+</div>
+<input type="text" id="busca" placeholder="Buscar no cardápio" maxlength="40" onkeyup="buscar(event)">
+<a class="botao2" href="login.html">Entrar</a>
+<a class="botao" href="login.html">Cadastrar</a>
+<button class="botaoTema" onclick="mudarTema()">&#9790;</button>
+</div>
+<div class="conteudo">
+<h1>Cardápio</h1>
+<div class="filtros">
+<button onclick="filtrar('Todos')">Todos</button>
+<button onclick="filtrar('Burgers')">Burgers</button>
+<button onclick="filtrar('Porções')">Porções</button>
+<button onclick="filtrar('Bebidas')">Bebidas</button>
+<button onclick="filtrar('Sobremesas')">Sobremesas</button>
+</div>
+<div class="lista" id="listaProdutos"></div>
+</div>
+<div class="rodape">
+<span>Bora Burger - Todos os dias, 18h às 23h</span>
+<span>Contato - Instagram</span>
+</div>
+<script src="script.js"></script>
+<script>
+var parametros=new URLSearchParams(window.location.search);
+document.getElementById("busca").value=parametros.get("busca")||"";
+mostrarProdutos();
+</script>
+</body>
+</html>

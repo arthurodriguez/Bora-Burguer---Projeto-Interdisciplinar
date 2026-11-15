@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login e cadastro - Bora Burger</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="cabecalho">
+<span class="logo">Bora Burger</span>
+<button class="botaoTema botaoMenu" onclick="abrirMenu()">&#9776;</button>
+<div class="menu" id="menu">
+<a href="index.html">Início</a>
+<a href="produtos.html">Produtos</a>
+<a href="pedidos.html">Pedidos</a>
+<a href="carrinho.html">Carrinho</a>
+<a href="perfil.html">Perfil</a>
+</div>
+<input type="text" id="busca" placeholder="Buscar no cardápio" maxlength="40" onkeyup="buscar(event)">
+<a class="botao2" href="login.html">Entrar</a>
+<a class="botao" href="login.html">Cadastrar</a>
+<button class="botaoTema" onclick="mudarTema()">&#9790;</button>
+</div>
+<div class="conteudo">
+<div class="formularios">
+<form class="cartao" onsubmit="return enviar('Login realizado!')">
+<h2>Entrar</h2>
+<label>E-mail<input type="email" placeholder="voce@email.com" maxlength="60" required ></label>
+<label>Senha<input type="password" placeholder="Sua senha" maxlength="20" required ></label>
+<button class="botao" type="submit">Entrar</button>
+</form>
+<form class="cartao" onsubmit="return enviar('Cadastro realizado!')">
+<h2>Criar conta</h2>
+<div class="campos">
+<label>Nome completo<input type="text" placeholder="Seu nome" maxlength="60" required ></label>
+<label>CPF<input type="text" placeholder="000.000.000-00" maxlength="14" required inputmode="numeric" oninput="mascaraCpf(this)"></label>
+<label>Telefone<input type="text" placeholder="(00) 00000-0000" maxlength="15" required inputmode="numeric" oninput="mascaraTelefone(this)"></label>
+<label>CEP<input type="text" placeholder="00000-000" maxlength="9" required inputmode="numeric" oninput="mascaraCep(this)"></label>
+<label>E-mail<input type="email" placeholder="voce@email.com" maxlength="60" required ></label>
+<label>Senha<input type="password" placeholder="Mínimo 8 caracteres" maxlength="20" required minlength="8"></label>
+</div>
+<button class="botao" type="submit">Cadastrar</button>
+</form>
+</div>
+</div>
+<div class="rodape">
+<span>Bora Burger - Todos os dias, 18h às 23h</span>
+<span>Contato - Instagram</span>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

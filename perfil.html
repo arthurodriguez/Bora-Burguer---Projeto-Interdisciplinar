@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perfil - Bora Burger</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="cabecalho">
+<span class="logo">Bora Burger</span>
+<button class="botaoTema botaoMenu" onclick="abrirMenu()">&#9776;</button>
+<div class="menu" id="menu">
+<a href="index.html">Início</a>
+<a href="produtos.html">Produtos</a>
+<a href="pedidos.html">Pedidos</a>
+<a href="carrinho.html">Carrinho</a>
+<a href="perfil.html">Perfil</a>
+</div>
+<input type="text" id="busca" placeholder="Buscar no cardápio" maxlength="40" onkeyup="buscar(event)">
+<a class="botao2" href="login.html">Entrar</a>
+<a class="botao" href="login.html">Cadastrar</a>
+<button class="botaoTema" onclick="mudarTema()">&#9790;</button>
+</div>
+<div class="conteudo">
+<div class="formularios">
+<div class="cartao">
+<h2>Nome do cliente</h2>
+<p class="suave">cliente@email.com</p>
+<a class="botao2" href="login.html">Sair</a>
+</div>
+<form class="cartao" style="flex:2" onsubmit="return enviar('Dados salvos!')">
+<h2>Meus dados</h2>
+<div class="campos">
+<label>Nome completo<input type="text" placeholder="Nome do cliente" maxlength="60" required ></label>
+<label>CPF<input type="text" placeholder="000.000.000-00" maxlength="14" required inputmode="numeric" oninput="mascaraCpf(this)"></label>
+<label>Telefone<input type="text" placeholder="(00) 00000-0000" maxlength="15" required inputmode="numeric" oninput="mascaraTelefone(this)"></label>
+<label>E-mail<input type="email" placeholder="cliente@email.com" maxlength="60" required ></label>
+<label>CEP<input type="text" placeholder="00000-000" maxlength="9" required inputmode="numeric" oninput="mascaraCep(this)"></label>
+<label>Endereço<input type="text" placeholder="Rua, número, bairro" maxlength="80" required ></label>
+</div>
+<button class="botao" type="submit">Salvar alterações</button>
+</form>
+</div>
+</div>
+<div class="rodape">
+<span>Bora Burger - Todos os dias, 18h às 23h</span>
+<span>Contato - Instagram</span>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

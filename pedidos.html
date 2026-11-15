@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meus pedidos - Bora Burger</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="cabecalho">
+<span class="logo">Bora Burger</span>
+<button class="botaoTema botaoMenu" onclick="abrirMenu()">&#9776;</button>
+<div class="menu" id="menu">
+<a href="index.html">Início</a>
+<a href="produtos.html">Produtos</a>
+<a href="pedidos.html">Pedidos</a>
+<a href="carrinho.html">Carrinho</a>
+<a href="perfil.html">Perfil</a>
+</div>
+<input type="text" id="busca" placeholder="Buscar no cardápio" maxlength="40" onkeyup="buscar(event)">
+<a class="botao2" href="login.html">Entrar</a>
+<a class="botao" href="login.html">Cadastrar</a>
+<button class="botaoTema" onclick="mudarTema()">&#9790;</button>
+</div>
+<div class="conteudo">
+<h1>Meus pedidos</h1>
+<div class="linha"><b>#1042</b><span class="espaco suave">06/11/2026 - 20:15</span><span class="status">A caminho</span><b>R$ 40,00</b><a class="botao2" href="produtos.html">Pedir novamente</a></div>
+<div class="linha"><b>#1031</b><span class="espaco suave">30/10/2026 - 19:17</span><span class="status">Entregue</span><b>R$ 44,00</b><a class="botao2" href="produtos.html">Pedir novamente</a></div>
+<div class="linha"><b>#1017</b><span class="espaco suave">22/10/2026 - 21:05</span><span class="status">Entregue</span><b>R$ 74,00</b><a class="botao2" href="produtos.html">Pedir novamente</a></div>
+</div>
+<div class="rodape">
+<span>Bora Burger - Todos os dias, 18h às 23h</span>
+<span>Contato - Instagram</span>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

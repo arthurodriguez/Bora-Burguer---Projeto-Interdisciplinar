@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Início - Bora Burger</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="cabecalho">
+<span class="logo">Bora Burger</span>
+<button class="botaoTema botaoMenu" onclick="abrirMenu()">&#9776;</button>
+<div class="menu" id="menu">
+<a href="index.html">Início</a>
+<a href="produtos.html">Produtos</a>
+<a href="pedidos.html">Pedidos</a>
+<a href="carrinho.html">Carrinho</a>
+<a href="perfil.html">Perfil</a>
+</div>
+<input type="text" id="busca" placeholder="Buscar no cardápio" maxlength="40" onkeyup="buscar(event)">
+<a class="botao2" href="login.html">Entrar</a>
+<a class="botao" href="login.html">Cadastrar</a>
+<button class="botaoTema" onclick="mudarTema()">&#9790;</button>
+</div>
+<div class="conteudo">
+<div class="inicio">
+<div class="texto">
+<h1>Hambúrguer artesanal na sua porta em até 40 minutos</h1>
+<p class="suave">Escolha, monte seu carrinho e acompanhe o pedido.</p>
+<div class="botoes">
+<a class="botao" href="produtos.html">Ver cardápio</a>
+<a class="botao2" href="login.html">Criar conta</a>
+</div>
+</div>
+<img src="imagens/hamburguer-mexicano.jpg" alt="Hambúrguer artesanal">
+</div>
+<div class="cartoes">
+<div class="cartao"><h3>Entrega rápida</h3><p>Acompanhe o status do pedido.</p></div>
+<div class="cartao"><h3>Ingredientes frescos</h3><p>Pão e carne preparados no dia.</p></div>
+<div class="cartao"><h3>Pagamento flexível</h3><p>Pix, cartão ou dinheiro na entrega.</p></div>
+</div>
+</div>
+<div class="rodape">
+<span>Bora Burger - Todos os dias, 18h às 23h</span>
+<span>Contato - Instagram</span>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
